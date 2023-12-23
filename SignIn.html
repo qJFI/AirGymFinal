@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/SignIn.css">
+    <title>Document</title>
+      <!-- page icon -->
+ 
+  <link rel="shortcut icon" href="./assets/images/bar logo.png" sizes="200%">
+</head>
+<body>
+   <a href="index.html">
+        <img src="assets/images/logo1.png" width="255" height="255" 
+        class="logo1" alt="logo">
+      </a>
+   
+      <form class="form" method="post"  action="http://localhost/airgym/php/login.php" onsubmit="return validate_form();">
+        <p class="title">SignIn </p>
+        <p class="message">Welcome Back Legend. </p>
+           
+        <label>
+            <input class="input" type="email"  name="email" placeholder="" required="">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input class="input" type="password" name="password" placeholder="" required="">
+            <span>Password</span>
+        </label>
+        <button class="submit">Submit</button>
+   
+        <p class="signin">dont have acount yet ? <a href="Sign Up.HTML">Signup</a> </p>
+    </form>
+    <script src="validtor.js"></script>
+</body>
+</html>

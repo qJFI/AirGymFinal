@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirGym- الرياضة مصنع العقلاء</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 
+    tab icon
+  -->
+  <link rel="shortcut icon" href="./assets/images/bar logo.png" sizes="200%">
+
+  <!-- 
+   css 
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- small js code for nav and somethings -->
+ 
+  
+  <!-- 
+    font
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container" >
+
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo1.png" width="255" height="270" 
+        class="logo1" alt="logo">
+        
+
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link active" data-nav-link >Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+<!--           
+          <li>
+            <a href="bundles.html" class="navbar-link" data-nav-link >Bundles</a>
+          </li> -->
+          
+          <li>
+            <a href="Coaches.html" class="navbar-link" data-nav-link >Coaches</a>
+          </li>
+
+
+          <li>
+            <a href="Contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+          <li>
+            <a href="Location.html" class="navbar-link " data-nav-link>Locations</a>
+          </li>
+        </ul>
+
+      </nav>
+      <a href="SignIn.html" class="btn btn-secondary">Sign In</a>
+      <a href="bundles.html" class="btn btn-secondary">Join Now</a>
+      
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        HERO
+      -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            
+            <h1 class="h1 hero-title">Work Hard To Get Better Life</h1>
+
+            <p class="section-text">
+              Your goal is our goal and your dream is important to us !
+            </p>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/hero-banner.png" width="660" height="753" alt="hero banner" class="w-100">
+
+            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+
+            <img src="./assets/images/heart-rate.png" width="255" height="270" alt="heart rate"
+              class="abs-img abs-img-1">
+            <img src="./assets/images/calories.png" width="348" height="224" alt="calories" class="abs-img abs-img-2">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- 
+        VIDEO
+      -->
+
+      <section class="section video" aria-label="video">
+        <div class="container">
+          <div class="video-card has-before has-bg-image"
+            style="background-image: url('./assets/images/video-banner.jpg')">
+            <h2 class="h2 card-title">Explore Air Gym</h2>
+
+              <video width="130%" height="130%" controls autoplay nofullscreen nodownload muted loop> 
+                <source src="./assets/videos/2.mp4" type="video/mp4">
+                Error.
+              </video>
+              
+            
+          </div>
+        </div>
+      </section>
+      
+
+
+      <br/><br/><br/><br/><br/><br/><br/>
+<center>
+<div class="BMI" id="BMI">
+      <h1 style="color:#0062ff;">BMI Calculator</h1>
+      <label>
+          <input id="h-input" type="number" placeholder="Enter Your Height in Centimeters: ">
+      </label>        
+      <label>
+          <input id="w-input" type="number" placeholder="Enter Your Weight in Kilogrames: ">
+      </label>            
+      <button type="submit" onclick="Calculate()">Calculate BMI</button>
+</div> 
+
+
+<br><br> <br><br> <br><br>
+<button onclick="Disp()" id="BMI-btn" >Check Your Status</button>
+ <div  id="val" class="h2 section-title"> </div>
+   
+     
+ 
+<div id="bmi-status" class="h2 section-title"></div>
+     
+  </center>
+  <br><br>
+<script>
+ $(document).ready(function(){
+
+   $("#BMI").hide();
+})
+
+function Disp(){
+  $("#BMI-btn").hide();
+  $("#BMI").show();
+}
+
+  function Calculate(){
+    var height = document.getElementById("h-input").value;
+    var weight = document.getElementById("w-input").value;
+
+    var result = Math.ceil(parseFloat(weight) /(parseFloat(height)/100)**2);
+
+
+
+    
+    if(!isNaN(result)){
+     
+    
+        document.getElementById("val").innerHTML = "BMI = "+result;
+        if(result < 18.5){
+            document.getElementById("bmi-status").innerHTML += "You should join us to help you gain wight ";
+        }
+        else if(result < 25){
+            document.getElementById("bmi-status").innerHTML += "You should join us to maintain your health ";
+        }
+        else if(result < 30){
+            document.getElementById("bmi-status").innerHTML += "You should join us to help you loss wight ";
+        }
+        else{
+            document.getElementById("bmi-status").innerHTML += "You should join us to help you avoid health issues ";
+        }
+        $("#BMI").hide();
+
+
+       
+    }
+}
+</script>
+
+  <!-- 
+    FOOTER
+  -->
+
+  <footer class="footer" id="footer">
+
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="assets/images/logo1.png" width="255" height="270" 
+            class="logo1" alt="logo">
+            
+    
+           <!-- <span class="span">GYM</span>-->
+          </a>
+         
+          <p class="footer-brand-text">
+            JFI MSA Web Project &copy.
+          </p>
+
+          <div class="wrapper">
+
+            <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
+
+            <ul class="footer-brand-list">
+
+              <li>
+                <p class="footer-brand-title">Saturday - thursday</p>
+
+                <p>6:00Am - 2:00Am</p>
+              </li>
+
+              <li>
+                <p class="footer-brand-title">Friday</p>
+
+                <p>2:00Pm - 2:00Am</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Links</p>
+          </li>
+
+          <li>
+            <a href="index.html" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="bundles.html" class="footer-link">Bundles</a>
+          </li>
+          
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Contact Us</p>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+            </div>
+
+            <address class="address footer-link">
+              MAADI - OCTOBER - HARAM - NASR CITY
+            </address>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:18001213637" class="footer-link">+011 01188884</a>
+
+              <a href="tel:+915552348765" class="footer-link">+011 21822228</a>
+            </div>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="airgym@gmail.com" class="footer-link">airgym@gmail.com</a>
+
+              <a href="airgymservices@gmail.com" class="footer-link">airgymservices@gmail.com</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <p>&nbsp &nbsp &nbsp &nbsp Social Media</p>
+          <li>
+            <ul class="social-list">
+
+              <li>
+               
+                <a href="https://web.facebook.com/Air.Gym.Egypt" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+               
+                <a href="https://www.instagram.com/airgym_roshde/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <br/>
+      <center>
+  <div id="opinion" class="btn btn-secondary " style="background-color: white;">
+    <button onclick="takeOpinion()">Give FeedBack</button>
+  </center>
+  </div>
+    </div>
+
+    
+  
+  </footer>
+
+
+
+
+
+  <!-- 
+    BACK TOP Button
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+  
+
+
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script src="script.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+ 
+  
+ 
+  
+  <script>
+    function takeOpinion() {
+      var opinion = prompt("What is your opinion?");
+      
+      if (opinion != null && opinion != "") {
+        writeNote(opinion);
+      } else {
+        // handle the case if the user cancels or submits an empty string
+      }
+    }
+  
+    function writeNote(opinion) {
+      var note = "Client's opinion: " + opinion;
+      document.getElementById("opinion").innerHTML = note;
+      // You can store the note in a database, display it on the webpage, or perform any other action with it here
+    }
+  </script>
+  
+</body>
+
+</html>

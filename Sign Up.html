@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/SignIn.css">
+    <title>Document</title>
+      <!-- page icon -->
+ 
+  <link rel="shortcut icon" href="./assets/images/bar logo.png" sizes="200%">
+</head>
+<body>
+   <a href="index.html">
+        <img src="assets/images/logo1.png" width="255" height="255" 
+        class="logo1" alt="logo">
+      </a>
+   
+      <form class="form" method="post"  action="http://localhost/airgym/php/register.php" onsubmit="return validate_form();">
+        <p class="title">Sign Up </p>
+        <p class="message">Forma Is Loading</p>
+      
+        <div class="flex">
+            <label>
+                <input class="input" type="text" name="fname" placeholder required>
+                <span>Firstname</span>
+            </label>
+    
+            <label>
+                <input class="input" type="text" name="lname" placeholder required >
+                <span>Lastname</span>
+            </label>
+        </div>  
+        
+        <label>
+            <input class="input" type="email" name="email" placeholder required>
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input class="input" type="password" name="password" id="registerPassword"  placeholder required>
+            <span>Password</span>
+        </label>
+        <label>
+            <input class="input" type="password" name="confirm_password" id="registerConfrimPassword" required>
+            <span>Confirm password</span>
+        </label>
+        
+        <button  class="submit" name="register" value="register" type="submit">Submit</button>
+        <p class="signin">Already have an acount ? <a href="Signin.html">Signin</a> </p>
+    </form>
+    <script src="validtor.js"></script>
+</body>
+</html>

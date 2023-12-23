@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirGym- الرياضة مصنع العقلاء</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- 
+    tab icon
+  -->
+  <link rel="shortcut icon" href="./assets/images/bar logo.png" sizes="200%">
+
+  <!-- 
+   css 
+  -->
+  <link rel="stylesheet" href="./assets/css/about.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- small js code for nav and somethings -->
+ 
+  
+  <!-- 
+    font
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    HEADER
+  -->
+
+  <header class="header" data-header  style="background-color: #151C23";>
+    <div class="container" >
+
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo1.png" width="255" height="270" 
+        class="logo1" alt="logo">
+        
+
+      </a>
+
+      <nav class="navbar" data-navbar   >
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link "  style="color: white;" data-nav-link >Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link" style="color: white;" data-nav-link>About Us</a>
+          </li>
+
+<!--           
+          <li>
+            <a href="bundles.html" class="navbar-link" data-nav-link >Bundles</a>
+          </li> -->
+          
+          <li>
+            <a href="Coaches.html" class="navbar-link" style="color: white;" data-nav-link >Coaches</a>
+          </li>
+
+
+          <li>
+            <a href="Contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+          <li>
+            <a href="Location.html" class="navbar-link active" data-nav-link>Locations</a>
+          </li>
+
+
+        </ul>
+
+      </nav>
+      <a href="SignIn.html" class="btn btn-secondary">Sign In</a>
+      <a href="bundles.html" class="btn btn-secondary">Join Now</a>
+      
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+      
+      
+<center>
+  <div >
+    <div class="pane Locations">
+        <label onclick="Maadi()" class="label">
+            <span style="color:white;">MAADI</span>
+            <input id="Maadi" class="input" name="radio" type="radio">
+        </label>
+        <label onclick="October()" class="label">
+            <span style="color:white;">OCTOBER</span>
+            <input id="October" class="input" checked="checked" name="radio" type="radio">
+        </label>
+        <label onclick="Haram()" class="label">
+            <span style="color:white;">HARAM</span>
+            <input id="Haram" class="input" name="radio" type="radio">
+        </label>
+        <label onclick="Nasr()" class="label">
+          <span style="color:white;">NASR City</span>
+          <input id="Nasr" class="input" name="radio" type="radio">
+      </label>
+        <span class="selection"></span>
+    </div>
+  </div>
+  
+ 
+
+
+
+
+        <p class="section-subtitle">Location</p>
+
+        
+
+        <div id="Gphotos" class="mgn"></div>
+     </center>
+
+
+
+  <!-- 
+    FOOTER
+  -->
+
+  <footer class="footer" id="footer">
+
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="assets/images/logo1.png" width="255" height="270" 
+            class="logo1" alt="logo">
+            
+    
+           <!-- <span class="span">GYM</span>-->
+          </a>
+         
+          <p class="footer-brand-text">
+            JFI MSA Web Project &copy.
+          </p>
+
+          <div class="wrapper">
+
+            <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
+
+            <ul class="footer-brand-list">
+
+              <li>
+                <p class="footer-brand-title">Saturday - thursday</p>
+
+                <p>6:00Am - 2:00Am</p>
+              </li>
+
+              <li>
+                <p class="footer-brand-title">Friday</p>
+
+                <p>2:00Pm - 2:00Am</p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Our Links</p>
+          </li>
+
+          <li>
+            <a href="index.html" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="bundles.html" class="footer-link">Bundles</a>
+          </li>
+          
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title has-before">Contact Us</p>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="location" aria-hidden="true"></ion-icon>
+            </div>
+
+            <address class="address footer-link">
+              MAADI - OCTOBER - HARAM - NASR CITY
+            </address>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:18001213637" class="footer-link">+011 01188884</a>
+
+              <a href="tel:+915552348765" class="footer-link">+011 21822228</a>
+            </div>
+          </li>
+
+          <li class="footer-list-item">
+            <div class="icon">
+              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div>
+              <a href="airgym@gmail.com" class="footer-link">airgym@gmail.com</a>
+
+              <a href="airgymservices@gmail.com" class="footer-link">airgymservices@gmail.com</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <p>&nbsp &nbsp &nbsp &nbsp Social Media</p>
+          <li>
+            <ul class="social-list">
+
+              <li>
+               
+                <a href="https://web.facebook.com/Air.Gym.Egypt" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+               
+                <a href="https://www.instagram.com/airgym_roshde/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <br/>
+  </div>
+    </div>
+
+    
+  
+  </footer>
+
+
+
+
+
+  <!-- 
+    BACK TOP Button
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+  
+
+
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script src="location.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+ 
+  
+ 
+  
+  <script>
+    function takeOpinion() {
+      var opinion = prompt("What is your opinion?");
+      
+      if (opinion != null && opinion != "") {
+        writeNote(opinion);
+      } else {
+        // handle the case if the user cancels or submits an empty string
+      }
+    }
+  
+    function writeNote(opinion) {
+      var note = "Client's opinion: " + opinion;
+      document.getElementById("opinion").innerHTML = note;
+      // You can store the note in a database, display it on the webpage, or perform any other action with it here
+    }
+  </script>
+  
+</body>
+
+</html>
